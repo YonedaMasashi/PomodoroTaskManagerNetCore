@@ -4,6 +4,11 @@
     <ProjectReference Include="..\PomodoroTaskManagerDomain\PomodoroTaskManagerDomain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Expression.Blend.Sdk.WPF" Version="1.0.1" />
+    <PackageReference Include="Uno.GalaSoft.MvvmLight" Version="5.4.0-uno.134" />
+  </ItemGroup>
+
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.0</TargetFramework>

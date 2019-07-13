@@ -1,5 +1,7 @@
 ﻿using PomodoroTaskManagerDesktop.DataTypeDef.Enum;
 using PomodoroTaskManagerDesktop.Timer;
+using PomodoroTaskManagerDesktop.ViewModel;
+using PomodoroTaskManagerDesktop.View.Setting;
 using PomodoroTaskManagerDomain.Model;
 using System;
 using System.Collections.Generic;
@@ -31,7 +33,7 @@ namespace PomodoroTaskManagerDesktop.View.TaskTray {
         TimeInterval _timeInterval;
 
         // View Model
-        //SettingsVM _settingsVM;
+        SettingsVM _settingsVM;
         //EndPomodoroVM _endPomodoroVM;
         //TaskListVM _taskListVM;
 
@@ -51,7 +53,7 @@ namespace PomodoroTaskManagerDesktop.View.TaskTray {
             _pomodoroTime.PomodoroTimerTickEventHandler += new PomodoroTimer.TimerTickEventHandler(CallBackEventProgress);
 
             // Window の初期化
-//            _settingsVM = new SettingsVM(_timeInterval);
+            _settingsVM = new SettingsVM(_timeInterval);
 //            _endPomodoroVM = new EndPomodoroVM(_pomodoroTime);
 //            _taskListVM = new TaskListVM();
 
@@ -200,8 +202,8 @@ namespace PomodoroTaskManagerDesktop.View.TaskTray {
         /// <param name="e">イベントデータ</param>
         private void toolStripMenuItem_Settings_Click(object sender, EventArgs e)
         {
-//            SettingsWindow settingWindow = new SettingsWindow(_settingsVM);
-//            settingWindow.ShowDialog();
+            SettingsWindow settingWindow = new SettingsWindow(_settingsVM);
+            settingWindow.ShowDialog();
         }
     }
 }

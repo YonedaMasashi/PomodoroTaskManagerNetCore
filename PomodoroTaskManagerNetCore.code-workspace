@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "PomodoroTaskManagerDesktop"
+		},
+		{
+			"path": "PomodoroTaskManagerDomain"
+		},
+		{
+			"path": "TestConsole"
+		}
+	]
+}
